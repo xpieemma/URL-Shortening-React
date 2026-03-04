@@ -7,11 +7,10 @@ export const shortenUrlDelay = async () => {
 };
 
 export const shortenUrlBitly = async (Url) => {
-  // Read env vars inside the function so vi.stubEnv() can intercept them in tests
   const BITLY_API_URL =
-    import.meta.env.VITE_BITLY_API_URL || "https://api-ssl.bitly.com/v4/shorten";
-  const BITLY_TOKEN = import.meta.env.VITE_BITLY_TOKEN;
-  const BITLY_GROUP_GUID = import.meta.env.VITE_BITLY_GROUP_GUID;
+    import.meta.env.BITLY_API_URL || "https://api-ssl.bitly.com/v4/shorten";
+  const BITLY_TOKEN = import.meta.env.BITLY_TOKEN;
+  const BITLY_GROUP_GUID = import.meta.env.BITLY_GROUP_GUID;
 
   try {
     const response = await axios.post(
