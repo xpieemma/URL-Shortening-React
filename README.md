@@ -1,4 +1,4 @@
-# React + Vite
+Check it out...[live](https://url-shortening-react-wine.vercel.app/)
 # Frontend Mentor - Shortly URL shortening API Challenge
 
 This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). 
@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [shortUrl](https://github.com/xpieemma/URL-Shortening-React)
-- Live Site URL: [live site URL]()
+- Live Site URL: [live](https://url-shortening-react-wine.vercel.app/)
 
 ## My process
 
