@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add your GitHub repo URL here](https://your-solution-url.com)
+- Solution URL: [shortUrl](https://github.com/xpieemma/URL-Shortening-React)
 - Live Site URL: [live site URL](https://your-live-site-url.com)
 
 ## My process
