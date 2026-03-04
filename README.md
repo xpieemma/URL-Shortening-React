@@ -58,5 +58,5 @@ Users should be able to:
 ## Author
 
 - **E. Pierre**
-- GitHub - [@yourusername](https://github.com/xpieemma)
+- GitHub - [xpieemma](https://github.com/xpieemma)
 - LinkedIn - [E. Pierre](https://www.linkedin.com/in/epierr14)
