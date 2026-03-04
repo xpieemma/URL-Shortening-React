@@ -1,0 +1,28 @@
+# Ignore test files
+cypress/
+src/__tests__/
+src/_tests_/
+src/test/
+*.test.js
+*.test.jsx
+*.spec.js
+*.spec.jsx
+
+# Ignore configuration files
+README.md
+.gitignore
+.eslintrc.js
+.prettierrc
+.husky/
+.commitlintrc.json
+
+# Ignore local environment
+.env
+.env-example
+.env.local
+.env.development
+.env.test
+
+# Ignore documentation
+docs/
+*.md

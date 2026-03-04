@@ -1,30 +1,68 @@
-import Shortener from "./components/Shortener";
-import { useState } from "react";
-import "./App.css";
+
+import { Toaster } from 'react-hot-toast';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Shortener from './components/Shortener';
+import LinkList from './components/LinkList';
+import Statistics from './components/Statistics';
+import CTA from './components/CTA';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import './App.css';
 
 function App() {
-  const [links, setLinks] = useState([]);
+  const [links, setLinks] = useLocalStorage('shortenedLinks', []);
 
-  const handleNewLink = (linkObj) => {
-    setLinks((prev) => [linkObj, ...prev]);
+  const handleLinkShortened = (newLink) => {
+    setLinks([newLink, ...links]);
+  };
+
+  const handleCopy = (linkId) => {
+    setLinks(links.map(link => ({
+      ...link,
+      copied: link.id === linkId
+    })));
+
+    
+    setTimeout(() => {
+      setLinks(prevLinks => prevLinks.map(link => ({
+        ...link,
+        copied: false
+      })));
+    }, 3000);
   };
 
   return (
+    <ErrorBoundary>
     <div className="app">
-      <Shortener onLink={handleNewLink} />
-      <div className="links-list">
-        {links.map((link) => (
-          <div key={link.id} className="link-item">
-            <p>
-              <strong>Original:</strong> {link.original}
-            </p>
-            <p>
-              <strong>Shortened:</strong> {link.shortened}
-            </p>
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: '#fff',
+            color: '#363636',
+          },
+        }}
+      />
+      <Header />
+      <main>
+        <Hero />
+        <section className="shortener-section">
+          <div className="container">
+            <div className="shortener-wrapper">
+              <Shortener onLinkShortened={handleLinkShortened} />
+              <LinkList links={links} onCopy={handleCopy} />
+            </div>
           </div>
-        ))}
-      </div>
+        </section>
+        <Statistics />
+        <CTA />
+      </main>
+      <Footer />
     </div>
+    </ErrorBoundary>
   );
 }
 
