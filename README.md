@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [shortUrl](https://github.com/xpieemma/URL-Shortening-React)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Live Site URL: [live site URL]()
 
 ## My process
 
