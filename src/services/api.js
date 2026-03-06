@@ -17,9 +17,9 @@ export const shortenUrlDelay = async (url) => {
 export const shortenUrlBitly = async (url) => {
 
   const BITLY_API_URL =
-    import.meta.env.VITE_BITLY_API_URL || "https://api-ssl.bitly.com/v4/shorten";
-  const BITLY_TOKEN = import.meta.env.VITE_BITLY_TOKEN;
-  const BITLY_GROUP_GUID = import.meta.env.VITE_BITLY_GROUP_GUID;
+    process.env.VITE_BITLY_API_URL || "https://api-ssl.bitly.com/v4/shorten";
+  const BITLY_TOKEN = process.env.VITE_BITLY_TOKEN;
+  const BITLY_GROUP_GUID = process.env.VITE_BITLY_GROUP_GUID;
 
   console.log('Shortening URL with Bitly:', url); 
 
