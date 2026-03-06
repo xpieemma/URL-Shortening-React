@@ -1,16 +1,16 @@
-// api/shorten.js
+
 export default async function handler(req, res) {
-  // Enable CORS
+ 
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  // Handle preflight OPTIONS request
+ 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
 
-  // Only allow POST
+  
   if (req.method !== 'POST') {
     return res.status(405).json({ 
       error: 'Method not allowed',
@@ -28,11 +28,10 @@ export default async function handler(req, res) {
       });
     }
 
-    // Get Bitly token from environment variables
-    // Note: In serverless functions, use process.env, not import.meta.env
-    const BITLY_TOKEN = process.env.VITE_BITLY_TOKEN;
-    const BITLY_GROUP_GUID = process.env.VITE_BITLY_GROUP_GUID;
-    const BITLY_API_URL = process.env.VITE_BITLY_API_URL || 'https://api-ssl.bitly.com/v4/shorten';
+    
+    const BITLY_TOKEN = import.meta.env.VITE_BITLY_TOKEN;
+    const BITLY_GROUP_GUID = import.meta.env.VITE_BITLY_GROUP_GUID;
+    const BITLY_API_URL = import.meta.env.VITE_BITLY_API_URL || 'https://api-ssl.bitly.com/v4/shorten';
 
     if (!BITLY_TOKEN || !BITLY_GROUP_GUID) {
       console.error('Missing Bitly credentials');
@@ -42,7 +41,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // Call Bitly API
+   
     const response = await fetch(BITLY_API_URL, {
       method: 'POST',
       headers: {
