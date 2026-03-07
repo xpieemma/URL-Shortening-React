@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/URL-Shortening-React/',
+   base: process.env.GITHUB_PAGES ? '/URL-Shortening-React/' : '/',
   plugins: [react()],
    build: {
     emptyOutDir: true,
