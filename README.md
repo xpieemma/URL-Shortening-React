@@ -1,5 +1,8 @@
 ![logo](./public/favicon.svg)
-[live](https://url-shortening-react-wine.vercel.app/)
+
+[Github Page](https://xpieemma.github.io/URL-Shortening-React/)
+[Vercel live](https://url-shortening-react-wine.vercel.app/)
+
 # Frontend Mentor - Shortly URL shortening API Challenge
 
 This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). 
