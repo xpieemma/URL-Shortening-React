@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     }
 
     const BITLY_TOKEN = process.env.BITLY_TOKEN;
-    const BITLY_GROUP_GUID = process.env.BITLY_GROUP_GUID;  // ← also fixed, was process.meta.env
+    const BITLY_GROUP_GUID = process.env.BITLY_GROUP_GUID; 
     const BITLY_API_URL = process.env.BITLY_API_URL || 'https://api-ssl.bitly.com/v4/shorten';
 
     if (!BITLY_TOKEN || !BITLY_GROUP_GUID) {
