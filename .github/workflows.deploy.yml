@@ -31,6 +31,6 @@ jobs:
           working-directory: ./
           vercel-version: 28.1.0
         env:
-          VITE_BITLY_TOKEN: ${{ secrets.VITE_BITLY_TOKEN }}
-          VITE_BITLY_GROUP_GUID: ${{ secrets.VITE_BITLY_GROUP_GUID }}
-          VITE_BITLY_API_URL: ${{ secrets.VITE_BITLY_API_URL }}
+          VITE_BITLY_TOKEN: ${{ secrets.BITLY_TOKEN }}
+          VITE_BITLY_GROUP_GUID: ${{ secrets.BITLY_GROUP_GUID }}
+          VITE_BITLY_API_URL: ${{ secrets.BITLY_API_URL }}
