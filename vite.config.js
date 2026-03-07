@@ -4,6 +4,7 @@ import { configDefaults } from 'vitest/config'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? '/URL-Shortening-React/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
