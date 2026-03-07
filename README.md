@@ -7,6 +7,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [ScreenShots](#ScreenShots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -27,7 +28,13 @@ Users should be able to:
   - The `input` field is empty.
   - The URL submitted is invalid.
 
+## ScreenShots
+![Desktop](./src/assets/screenShot0.PNG)
+![zoom out](./src/assets/screenShot1.PNG)
+![mobile](./src/assets/screenShot_mobile0.PNG)
+![mobile statistic](./src/assets/screenShot-mobile1.PNG)
 
+![logo](./public/favicon.svg)
 
 ### Links
 
