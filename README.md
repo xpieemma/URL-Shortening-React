@@ -1,3 +1,4 @@
+![logo](./public/favicon.svg)
 [live](https://url-shortening-react-wine.vercel.app/)
 # Frontend Mentor - Shortly URL shortening API Challenge
 
@@ -34,7 +35,6 @@ Users should be able to:
 ![mobile](./src/assets/screenShot_mobile0.PNG)
 ![mobile statistic](./src/assets/screenShot-mobile1.PNG)
 
-![logo](./public/favicon.svg)
 
 ### Links
 

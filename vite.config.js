@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? '/URL-Shortening-React/' : '/',
+  base: '/URL-Shortening-React/',
   plugins: [react()],
   server: {
     port: 5173,
