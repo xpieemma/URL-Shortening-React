@@ -20,7 +20,7 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build project
         run: npm run build
         env:
@@ -39,4 +39,4 @@ jobs:
           BITLY_TOKEN: ${{ secrets.BITLY_TOKEN }}
           BITLY_GROUP_GUID: ${{ secrets.BITLY_GROUP_GUID }}
           BITLY_API_URL: ${{ secrets.BITLY_API_URL }}
-          GITHUB_PAGES: "true"
+         
