@@ -6,6 +6,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base: '/URL-Shortening-React/',
   plugins: [react()],
+   build: {
+    emptyOutDir: true,
+  },
   server: {
     port: 5173,
     open: true
